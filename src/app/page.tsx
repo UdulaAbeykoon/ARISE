@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
+import { useIsClient } from "../hooks/useIsClient";
+import ClientOnly from "../components/ClientOnly";
 
 export default function Home() {
   const [rating, setRating] = useState(0);
@@ -10,15 +12,10 @@ export default function Home() {
   const [showError, setShowError] = useState(false);
   const [currentImage, setCurrentImage] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isClient, setIsClient] = useState(false);
+  const isClient = useIsClient();
   const menuRef = useRef<HTMLDivElement>(null);
 
   const carouselImages = ['/1.png', '/2.png', '/3.png'];
-
-  // Ensure hydration consistency
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
 
   // Auto-transition carousel every 5 seconds
   useEffect(() => {
@@ -49,13 +46,6 @@ export default function Home() {
       document.removeEventListener('mousedown', handleClickOutside);
     };
   }, [isMenuOpen, isClient]);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -333,7 +323,7 @@ export default function Home() {
                 <h3 className="text-purple-200 text-lg font-medium mb-4">Key</h3>
                 <h2 className="text-white text-4xl sm:text-5xl lg:text-6xl font-bold mb-8">Features</h2>
                 <p className="text-purple-100 text-lg sm:text-xl leading-relaxed">
-                  This simulation app is a game-changer, setting a new standard for creativity, innovation, and hands-on learning. It's designed to ignite imagination and bring the future of robotics to life. Get ready to build, code, and explore in ways you've never seen before.
+                  This simulation app is a game-changer, setting a new standard for creativity, innovation, and hands-on learning. It is designed to ignite imagination and bring the future of robotics to life. Get ready to build, code, and explore in ways you have never seen before.
                 </p>
               </div>
 
@@ -472,7 +462,7 @@ export default function Home() {
                 {isClient && openFAQ === 1 && (
                   <div className="px-6 pb-6">
                     <p className="text-gray-600 leading-relaxed">
-                      ARISE is designed for students aged 8-18, but it's also perfect for educators, hobbyists, and anyone interested in learning robotics and programming in an engaging, visual way.
+                      ARISE is designed for students aged 8-18, but it is also perfect for educators, hobbyists, and anyone interested in learning robotics and programming in an engaging, visual way.
                     </p>
                   </div>
                 )}

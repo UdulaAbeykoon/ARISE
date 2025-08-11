@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:static": "next build && next export",
+    "build:safe": "set NEXT_TELEMETRY_DISABLED=1 && next build",
     "start": "next start",
     "lint": "next lint"
   },
