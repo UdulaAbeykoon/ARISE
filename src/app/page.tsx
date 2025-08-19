@@ -756,7 +756,7 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-gray-900 text-2xl font-bold mb-3">Luthira Abeykoon</h3>
-                  <p className="text-gray-500 text-base font-medium">Developer</p>
+                  <p className="text-gray-500 text-base font-medium">Engineer</p>
                 </div>
               </div>
 
@@ -787,7 +787,7 @@ export default function Home() {
                     />
                   </div>
                   <h3 className="text-gray-900 text-2xl font-bold mb-3">Kyle Fan</h3>
-                  <p className="text-gray-500 text-base font-medium">Designer</p>
+                  <p className="text-gray-500 text-base font-medium">Finance</p>
                 </div>
               </div>
             </div>
