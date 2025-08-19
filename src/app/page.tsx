@@ -666,10 +666,10 @@ export default function Home() {
               <h2 className="text-gray-900 text-4xl sm:text-5xl lg:text-6xl font-bold mb-8">The Team</h2>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-16">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-8 w-full max-w-3xl mx-auto mb-16 justify-center">
               {/* Team Member 1 - Udula */}
               <div 
-                className="bg-white rounded-3xl p-8 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer"
+                className="bg-white rounded-3xl p-12 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer w-80 h-80 flex flex-col justify-center items-center"
                 onMouseMove={handleCardMouseMove}
                 onMouseLeave={handleCardMouseLeave}
                 style={{ transformStyle: 'preserve-3d' }}
@@ -683,24 +683,24 @@ export default function Home() {
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </button>
-                <div className="mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100">
+                <div className="mb-8">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gray-100">
                     <Image
                       src="/udula.png"
                       alt="Udula Abeykoon"
-                      width={96}
-                      height={96}
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-gray-900 text-xl font-bold mb-2">Udula Abeykoon</h3>
-                  <p className="text-gray-500 text-sm font-medium">CEO</p>
+                  <h3 className="text-gray-900 text-2xl font-bold mb-3">Udula Abeykoon</h3>
+                  <p className="text-gray-500 text-base font-medium">CEO</p>
                 </div>
               </div>
 
               {/* Team Member 2 - Enhe */}
               <div 
-                className="bg-white rounded-3xl p-8 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer"
+                className="bg-white rounded-3xl p-12 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer w-80 h-80 flex flex-col justify-center items-center"
                 onMouseMove={handleCardMouseMove}
                 onMouseLeave={handleCardMouseLeave}
                 style={{ transformStyle: 'preserve-3d' }}
@@ -714,18 +714,80 @@ export default function Home() {
                     <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
                   </svg>
                 </button>
-                <div className="mb-6">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden bg-gray-100">
+                <div className="mb-8">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gray-100">
                     <Image
                       src="/enhe.png"
                       alt="Enhe Bai"
-                      width={96}
-                      height={96}
+                      width={128}
+                      height={128}
                       className="w-full h-full object-cover"
                     />
                   </div>
-                  <h3 className="text-gray-900 text-xl font-bold mb-2">Enhe Bai</h3>
-                  <p className="text-gray-500 text-sm font-medium">CTO</p>
+                  <h3 className="text-gray-900 text-2xl font-bold mb-3">Enhe Bai</h3>
+                  <p className="text-gray-500 text-base font-medium">CTO</p>
+                </div>
+              </div>
+
+              {/* Team Member 3 - Luthira Abeykoon */}
+              <div 
+                className="bg-white rounded-3xl p-12 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer w-80 h-80 flex flex-col justify-center items-center"
+                onMouseMove={handleCardMouseMove}
+                onMouseLeave={handleCardMouseLeave}
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <button 
+                  className="absolute top-4 right-4 hover:text-blue-600 transition-colors duration-200"
+                  onClick={() => window.open('https://www.linkedin.com/in/luthira/', '_blank')}
+                  title="View Luthira's LinkedIn Profile"
+                >
+                  <svg className="w-6 h-6 text-gray-400 hover:text-blue-600 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </button>
+                <div className="mb-8">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gray-100">
+                    <Image
+                      src="/luthira.png"
+                      alt="Luthira Abeykoon"
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-gray-900 text-2xl font-bold mb-3">Luthira Abeykoon</h3>
+                  <p className="text-gray-500 text-base font-medium">Developer</p>
+                </div>
+              </div>
+
+              {/* Team Member 4 - Kyle Fan */}
+              <div 
+                className="bg-white rounded-3xl p-12 border border-gray-200 text-center relative transition-all duration-300 ease-out cursor-pointer w-80 h-80 flex flex-col justify-center items-center"
+                onMouseMove={handleCardMouseMove}
+                onMouseLeave={handleCardMouseLeave}
+                style={{ transformStyle: 'preserve-3d' }}
+              >
+                <button 
+                  className="absolute top-4 right-4 hover:text-blue-600 transition-colors duration-200"
+                  onClick={() => window.open('https://www.linkedin.com/in/kyle-fan-80375428b/', '_blank')}
+                  title="View Kyle's LinkedIn Profile"
+                >
+                  <svg className="w-6 h-6 text-gray-400 hover:text-blue-600 transition-colors duration-200" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                  </svg>
+                </button>
+                <div className="mb-8">
+                  <div className="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden bg-gray-100">
+                    <Image
+                      src="/kyle.png"
+                      alt="Kyle Fan"
+                      width={128}
+                      height={128}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <h3 className="text-gray-900 text-2xl font-bold mb-3">Kyle Fan</h3>
+                  <p className="text-gray-500 text-base font-medium">Designer</p>
                 </div>
               </div>
             </div>
