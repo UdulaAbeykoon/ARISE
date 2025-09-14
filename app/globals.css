@@ -1,0 +1,359 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  /* Updated to purple and white color palette per design brief */
+  --background: #ffffff; /* Pure white */
+  --foreground: #374151; /* Dark gray for text */
+  --card: #f3f4f6; /* Light gray for cards */
+  --card-foreground: #6b5b8a; /* Rich purple for card text */
+  --popover: #ffffff;
+  --popover-foreground: #374151;
+  --primary: #6b5b8a; /* Rich purple for primary actions */
+  --primary-foreground: #ffffff;
+  --secondary: #9b59b6; /* Lighter purple for accents */
+  --secondary-foreground: #ffffff;
+  --muted: #eaecef; /* Soft gray */
+  --muted-foreground: #374151;
+  --accent: #9b59b6; /* Lighter purple for highlights */
+  --accent-foreground: #ffffff;
+  --destructive: #be123c;
+  --destructive-foreground: #ffffff;
+  --border: #eaecef;
+  --input: #f3f4f6;
+  --ring: #9b59b6;
+  --chart-1: #6b5b8a;
+  --chart-2: #9b59b6;
+  --chart-3: #f3f4f6;
+  --chart-4: #eaecef;
+  --chart-5: #ffffff;
+  --radius: 0.5rem;
+  --sidebar: #f3f4f6;
+  --sidebar-foreground: #374151;
+  --sidebar-primary: #6b5b8a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #9b59b6;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #eaecef;
+  --sidebar-ring: #9b59b6;
+}
+
+.dark {
+  --background: #1a1a2e;
+  --foreground: #ffffff;
+  --card: #16213e;
+  --card-foreground: #ffffff;
+  --popover: #1a1a2e;
+  --popover-foreground: #ffffff;
+  --primary: #9b59b6;
+  --primary-foreground: #ffffff;
+  --secondary: #6b5b8a;
+  --secondary-foreground: #ffffff;
+  --muted: #16213e;
+  --muted-foreground: #a1a1aa;
+  --accent: #9b59b6;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
+  --border: #374151;
+  --input: #374151;
+  --ring: #9b59b6;
+  --chart-1: #9b59b6;
+  --chart-2: #6b5b8a;
+  --chart-3: #374151;
+  --chart-4: #16213e;
+  --chart-5: #1a1a2e;
+  --sidebar: #16213e;
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #9b59b6;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #6b5b8a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #374151;
+  --sidebar-ring: #9b59b6;
+}
+
+@theme inline {
+  /* Updated fonts for modern creative typography */
+  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "Source Code Pro", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  --font-display: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Added custom animations and abstract shapes for unique design */
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-20px) rotate(2deg);
+  }
+}
+
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 30px rgba(107, 91, 138, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 50px rgba(107, 91, 138, 0.6);
+  }
+}
+
+@keyframes slide-in-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes morph {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s ease-in-out infinite;
+}
+
+.slide-in-left {
+  animation: slide-in-left 0.8s ease-out;
+}
+
+.slide-in-right {
+  animation: slide-in-right 0.8s ease-out;
+}
+
+.morph-shape {
+  animation: morph 8s ease-in-out infinite;
+}
+
+/* Custom abstract shapes */
+.abstract-shape {
+  position: absolute;
+  background: linear-gradient(135deg, rgba(107, 91, 138, 0.1), rgba(155, 89, 182, 0.1));
+  border-radius: 50%;
+}
+
+.abstract-shape-1 {
+  width: 200px;
+  height: 200px;
+  top: 10%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+}
+
+.abstract-shape-2 {
+  width: 150px;
+  height: 150px;
+  bottom: 20%;
+  left: 5%;
+  animation: float 8s ease-in-out infinite reverse;
+}
+
+.abstract-shape-3 {
+  width: 100px;
+  height: 100px;
+  top: 60%;
+  right: 20%;
+  animation: morph 10s ease-in-out infinite;
+}
+
+/* Adding grain texture and enhanced gradients for unique visual appeal */
+/* Grain texture overlay */
+.grain-texture::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    radial-gradient(circle at 75% 75%, rgba(107, 91, 138, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(155, 89, 182, 0.03) 1px, transparent 1px);
+  background-size: 4px 4px, 6px 6px, 8px 8px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Enhanced gradient backgrounds */
+.gradient-mesh {
+  background: radial-gradient(ellipse at top left, rgba(107, 91, 138, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse at top right, rgba(155, 89, 182, 0.1) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom left, rgba(155, 89, 182, 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse at bottom right, rgba(107, 91, 138, 0.12) 0%, transparent 50%);
+}
+
+.gradient-orb {
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(155, 89, 182, 0.8) 0%,
+      rgba(107, 91, 138, 0.6) 40%,
+      transparent 70%
+    ), radial-gradient(circle at 70% 70%, rgba(107, 91, 138, 0.6) 0%, rgba(155, 89, 182, 0.4) 40%, transparent 70%);
+  filter: blur(1px);
+}
+
+/* Animated gradient backgrounds */
+@keyframes gradient-shift {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    -45deg,
+    rgba(107, 91, 138, 0.1),
+    rgba(155, 89, 182, 0.15),
+    rgba(107, 91, 138, 0.08),
+    rgba(155, 89, 182, 0.12)
+  );
+  background-size: 400% 400%;
+  animation: gradient-shift 8s ease infinite;
+}
+
+/* Glassmorphism effects */
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(107, 91, 138, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Enhanced floating elements */
+@keyframes float-complex {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: translateY(-15px) translateX(5px) rotate(1deg) scale(1.02);
+  }
+  50% {
+    transform: translateY(-25px) translateX(-3px) rotate(-1deg) scale(0.98);
+  }
+  75% {
+    transform: translateY(-10px) translateX(-8px) rotate(2deg) scale(1.01);
+  }
+}
+
+.float-complex {
+  animation: float-complex 6s ease-in-out infinite;
+}
+
+/* Organic shapes */
+@keyframes organic-morph {
+  0%,
+  100% {
+    border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    transform: rotate(0deg) scale(1);
+  }
+  25% {
+    border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    transform: rotate(90deg) scale(1.1);
+  }
+  50% {
+    border-radius: 70% 30% 40% 60% / 40% 70% 60% 30%;
+    transform: rotate(180deg) scale(0.9);
+  }
+  75% {
+    border-radius: 40% 70% 60% 30% / 70% 40% 30% 60%;
+    transform: rotate(270deg) scale(1.05);
+  }
+}
+
+.organic-shape {
+  animation: organic-morph 12s ease-in-out infinite;
+}
+
+/* Enhanced abstract shapes with grain */
+.abstract-shape-enhanced {
+  position: absolute;
+  background: radial-gradient(
+      ellipse at center,
+      rgba(155, 89, 182, 0.2) 0%,
+      rgba(107, 91, 138, 0.1) 50%,
+      transparent 100%
+    ), radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 100% 100%, 3px 3px;
+  filter: blur(0.5px);
+}
