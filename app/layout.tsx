@@ -1,27 +1,20 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Playfair_Display, Source_Sans_3 } from "next/font/google"
+import { GeistSans } from "geist/font/sans"
 import { GeistMono } from "geist/font/mono"
-import { Analytics } from "@vercel/analytics/next"
-import { Suspense } from "react"
+import { Instrument_Serif } from "next/font/google"
 import "./globals.css"
 
-const playfairDisplay = Playfair_Display({
+const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800", "900"],
-  variable: "--font-playfair-display",
-})
-
-const sourceSans = Source_Sans_3({
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  variable: "--font-source-sans",
+  weight: ["400"],
+  display: "swap",
+  variable: "--font-instrument-serif",
 })
 
 export const metadata: Metadata = {
-  title: "ARISE - Robotics Education Reimagined",
-  description:
-    "Experience the future of robotics education with our innovative platform featuring Spike Prime robots, AR simulation, and visual coding",
+  title: "ARISE",
+  description: "The all in one robotics platform from CAD to visual programming to simulation in a virtual environment and augmented reality.",
   generator: "v0.app",
 }
 
@@ -32,10 +25,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`font-sans ${sourceSans.variable} ${playfairDisplay.variable} ${GeistMono.variable}`}>
-        <Suspense fallback={null}>{children}</Suspense>
-        <Analytics />
-      </body>
+      <head>
+        <style>{`
+html {
+  font-family: ${GeistSans.style.fontFamily};
+  --font-sans: ${GeistSans.variable};
+  --font-mono: ${GeistMono.variable};
+  --font-instrument-serif: ${instrumentSerif.variable};
+}
+        `}</style>
+      </head>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable}`}>{children}</body>
     </html>
   )
 }
