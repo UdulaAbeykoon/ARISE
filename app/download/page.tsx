@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 export default function DownloadPage() {
@@ -18,27 +19,27 @@ export default function DownloadPage() {
           <div className="bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-full px-10 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.1),0_4px_16px_rgba(0,0,0,0.05),inset_0_2px_4px_rgba(255,255,255,0.1),inset_0_-2px_4px_rgba(0,0,0,0.05)]">
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-12">
-                <a 
+                <Link 
                   href="/" 
                   className="text-white/80 hover:text-white transition-all duration-300 font-normal text-lg relative group"
                 >
                   Home
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white/60 to-white/30 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/learn" 
                   className="text-white/80 hover:text-white transition-all duration-300 font-normal text-lg relative group"
                 >
                   Learn
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white/60 to-white/30 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/download" 
                   className="text-white hover:text-white/80 transition-all duration-300 font-normal text-lg relative group"
                 >
                   Download
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-white/60 to-white/30"></span>
-                </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -1,6 +1,7 @@
 "use client"
 
 import React, { useState } from "react"
+import Link from "next/link"
 import { Button } from "@/components/ui/button"
 
 interface TimelineStep {
@@ -41,7 +42,7 @@ export default function LearnPage() {
       duration: "1 month", 
       date: "June 2024",
       description: "Scripting, building and testing software infrastructure. Growing early interest with 100 users on waitlist and 20 primary school letters of intent.",
-      topics: ["Scripting & building software", "Testing infrastructure", "100 on waitlist", "20 primary school LOI's"],
+      topics: ["Scripting & building software", "Testing infrastructure", "100 on waitlist", "20 primary school LOI&apos;s"],
       color: "purple",
       bgGradient: "from-purple-500/20 via-pink-500/10 to-indigo-500/20",
       iconGradient: "from-purple-400 to-pink-400",
@@ -106,26 +107,26 @@ export default function LearnPage() {
           <div className="bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-full px-10 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.1),0_4px_16px_rgba(0,0,0,0.05),inset_0_2px_4px_rgba(255,255,255,0.1),inset_0_-2px_4px_rgba(0,0,0,0.05)]">
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-12">
-                <a 
+                <Link 
                   href="/" 
                   className="text-white/80 hover:text-white transition-all duration-300 font-normal text-lg relative group"
                 >
                   Home
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white/60 to-white/30 group-hover:w-full transition-all duration-300"></span>
-                </a>
-                <a 
+                </Link>
+                <Link 
                   href="/learn" 
                   className="text-white hover:text-white/80 transition-all duration-300 font-normal text-lg relative group"
                 >
                   Learn
                   <span className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-white/60 to-white/30"></span>
-                </a>
-                <a 
+                </Link>
+                <Link
                   href="/download"
                   className="bg-gradient-to-r from-white/20 via-white/10 to-white/5 backdrop-blur-sm text-white border border-white/30 hover:border-white/50 rounded-full px-8 py-3 transition-all duration-300 font-normal text-lg hover:bg-gradient-to-r hover:from-white/30 hover:via-white/15 hover:to-white/10 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-100%] before:skew-x-12 before:transition-transform before:duration-500 hover:before:translate-x-[100%]"
                 >
                   Download
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -153,7 +154,7 @@ export default function LearnPage() {
                 In 2020, we started the Scarborough Stem Alliance (SSA) which was a non profit organization dedicated to creating opportunities for students and youth to get free hands on STEM education specifically with robotics. 
               </p>
               <p>
-                After hosting over 100 workshops globally, impacting over 10,000 youth, and distributing robotics kits all around the world, we noticed something that our efforts didn't address. Robotics is an iterative process and you learn from doing and failing hundreds of times. More often than not, children typically won't grasp the content by attending one or two workshops. Physical robotics kits, especially ones we were conducting the workshops with: lego spike prime kits would cost anywhere between $500-1000 with expansion kits and other equipment. This was a huge barrier for many students and schools, especially in low income areas. So we created ARISE, the all in one robotics education platform.
+                After hosting over 100 workshops globally, impacting over 10,000 youth, and distributing robotics kits all around the world, we noticed something that our efforts didn&apos;t address. Robotics is an iterative process and you learn from doing and failing hundreds of times. More often than not, children typically won&apos;t grasp the content by attending one or two workshops. Physical robotics kits, especially ones we were conducting the workshops with: lego spike prime kits would cost anywhere between $500-1000 with expansion kits and other equipment. This was a huge barrier for many students and schools, especially in low income areas. So we created ARISE, the all in one robotics education platform.
               </p>
               <p>
                 Our founders, passionate about both education and technology, envisioned a platform where 
@@ -162,7 +163,7 @@ export default function LearnPage() {
                 ARISE has grown into a comprehensive robotics learning ecosystem.
               </p>
               <p className="text-xl text-blue-300 font-normal">
-                Today, we're empowering thousands of students worldwide to build, program, and deploy robots 
+                Today, we&apos;re empowering thousands of students worldwide to build, program, and deploy robots 
                 without the traditional barriers of entry.
               </p>
             </div>
@@ -190,7 +191,7 @@ export default function LearnPage() {
                   <div className="h-full animate-beam-slide-full"></div>
                 </div>
 
-                {steps.map((step, index) => (
+                {steps.map((step) => (
                   <div key={step.id} className="flex flex-col items-center relative z-20">
                     {/* Date */}
                     <div className="mb-8 text-center">

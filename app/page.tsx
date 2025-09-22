@@ -3,19 +3,9 @@
 import type React from "react"
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
 
 export default function NewsletterLandingPage() {
-  const [email, setEmail] = useState("")
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
-    if (email) {
-      setIsSubmitted(true)
-      console.log("Newsletter signup:", email)
-    }
-  }
+  const [isSubmitted] = useState(false)
 
   return (
     <main className="min-h-screen relative overflow-hidden">
