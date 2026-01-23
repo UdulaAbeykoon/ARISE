@@ -16,18 +16,25 @@ export default function NewsletterLandingPage() {
             <div className="flex items-center justify-center">
               {/* Navigation Links */}
               <div className="flex items-center space-x-8">
-                <a 
-                  href="/learn" 
+                <a
+                  href="/learn"
                   className="text-white/80 hover:text-white transition-all duration-300 font-medium text-lg relative group"
                 >
                   Learn
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white/60 to-white/30 group-hover:w-full transition-all duration-300"></span>
                 </a>
-                <a 
+
+                <a
                   href="/download"
                   className="bg-gradient-to-r from-white/20 via-white/10 to-white/5 backdrop-blur-sm text-white border border-white/30 hover:border-white/50 rounded-full px-6 py-2 transition-all duration-300 font-medium text-lg hover:bg-gradient-to-r hover:from-white/30 hover:via-white/15 hover:to-white/10 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-100%] before:skew-x-12 before:transition-transform before:duration-500 hover:before:translate-x-[100%]"
                 >
                   Download
+                </a>
+                <a
+                  href="/account"
+                  className="bg-gradient-to-r from-white/20 via-white/10 to-white/5 backdrop-blur-sm text-white border border-white/30 hover:border-white/50 rounded-full px-6 py-2 transition-all duration-300 font-medium text-lg hover:bg-gradient-to-r hover:from-white/30 hover:via-white/15 hover:to-white/10 hover:scale-105 relative overflow-hidden before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-transparent before:via-white/10 before:to-transparent before:translate-x-[-100%] before:skew-x-12 before:transition-transform before:duration-500 hover:before:translate-x-[100%]"
+                >
+                  My Account
                 </a>
               </div>
             </div>
@@ -58,9 +65,9 @@ export default function NewsletterLandingPage() {
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 shadow-none">
         <div className="w-full text-center">
           <div className="opacity-0 animate-fade-in-up mb-12">
-            <img 
-              src="/ariselogo.png" 
-              alt="ARISE Logo" 
+            <img
+              src="/ariselogo.png"
+              alt="ARISE Logo"
               className="mx-auto h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72 w-auto object-contain"
             />
           </div>
