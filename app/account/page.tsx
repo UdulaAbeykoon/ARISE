@@ -34,7 +34,11 @@ export default function AccountPage() {
         })
         if (error) {
             console.error(error)
-            setLoginError("Error logging in with Google")
+            if (error.message === "Failed to fetch") {
+                setLoginError("Connection unavailable. If on Vercel, ensure Supabase Environment Variables are set.")
+            } else {
+                setLoginError("Error logging in with Google")
+            }
         }
         setLoading(false)
     }
@@ -50,7 +54,11 @@ export default function AccountPage() {
         })
 
         if (error) {
-            setLoginError(error.message)
+            if (error.message === "Failed to fetch") {
+                setLoginError("Connection failed. Check Supabase configuration.")
+            } else {
+                setLoginError(error.message)
+            }
         } else {
             setResendSuccess("Verification email sent.")
         }
@@ -73,6 +81,8 @@ export default function AccountPage() {
             // Check for specific "Email not confirmed" error message or status if available
             if (error.message.includes("Email not confirmed") || error.message.toLowerCase().includes("email not confirmed")) {
                 setLoginError("Email not confirmed") // Controlled message for UI logic
+            } else if (error.message === "Failed to fetch") {
+                setLoginError("Connection Error: Unable to reach Supabase. If you are seeing this on Vercel, you likely need to add your NEXT_PUBLIC_SUPABASE_URL and NON_KEY to the Vercel Project Settings.")
             } else {
                 setLoginError(error.message)
             }
@@ -106,7 +116,11 @@ export default function AccountPage() {
 
         if (error) {
             console.error(error)
-            setLoginError(error.message)
+            if (error.message === "Failed to fetch") {
+                setLoginError("Connection Error: Unable to reach Supabase. Please ensure your project environment variables (NEXT_PUBLIC_SUPABASE_URL) are correctly configured in Vercel.")
+            } else {
+                setLoginError(error.message)
+            }
             setLoading(false)
         } else {
             // Successfully signed up (session or no session). 
