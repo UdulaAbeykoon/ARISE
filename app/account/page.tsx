@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { Eye, EyeOff } from "lucide-react"
 import { supabase } from "@/lib/supabaseClient"
 
@@ -92,7 +93,7 @@ export default function AccountPage() {
         }
 
         setLoading(true)
-        const { data, error } = await supabase.auth.signUp({
+        const { error } = await supabase.auth.signUp({
             email: email.trim(),
             password,
             options: {
@@ -118,10 +119,12 @@ export default function AccountPage() {
         <div className="relative min-h-screen w-full flex items-center justify-center p-4">
             {/* Full Background Image */}
             <div className="absolute inset-0 z-0">
-                <img
+                <Image
                     src="/accountbg.png"
                     alt="Main Background"
-                    className="w-full h-full object-cover"
+                    fill
+                    className="object-cover"
+                    priority
                 />
                 {/* Optional dark overlay to help the card pop if the bg is too bright */}
                 <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
@@ -132,12 +135,13 @@ export default function AccountPage() {
 
                 {/* Left Side - Image Board */}
                 <div className="w-full lg:w-1/2 relative h-64 lg:h-auto">
-                    <img
+                    <Image
                         src="/loginimage.png"
                         alt="Login Visual"
-                        className="absolute inset-0 w-full h-full object-cover"
+                        fill
+                        className="object-cover"
                     />
-                    <div className="absolute bottom-0 left-0 w-full p-8 lg:p-12 text-white bg-gradient-to-t from-black/90 via-black/50 to-transparent">
+                    <div className="absolute bottom-0 left-0 w-full p-8 lg:p-12 text-white bg-gradient-to-t from-black/90 via-black/50 to-transparent z-10">
                         <h2 className="text-3xl lg:text-4xl font-bold mb-3">Find Your Future</h2>
                         <p className="text-sm lg:text-base opacity-90 max-w-sm">
                             Master robotics from CAD to simulation in one platform.

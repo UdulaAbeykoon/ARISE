@@ -2,6 +2,7 @@
 
 import React, { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 interface TimelineStep {
@@ -39,7 +40,7 @@ export default function LearnPage() {
       id: 2,
       title: "Development",
       level: "Build",
-      duration: "1 month", 
+      duration: "1 month",
       date: "June 2025",
       description: "Scripting, building and testing software infrastructure. Growing early interest with 100 users on waitlist and 20 primary school letters of intent.",
       topics: ["Scripting & building software", "Testing infrastructure", "100 on waitlist", "20 primary school LOI&apos;s"],
@@ -63,7 +64,7 @@ export default function LearnPage() {
     },
     {
       id: 4,
-      title: "Commercialization", 
+      title: "Commercialization",
       level: "Scale",
       duration: "1 month",
       date: "August 2025",
@@ -97,7 +98,7 @@ export default function LearnPage() {
     <main className="min-h-screen relative overflow-hidden bg-gradient-to-br from-black via-yellow-900/50 to-yellow-400">
       {/* Enhanced Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-yellow-800/60 to-yellow-500/80"></div>
-      
+
       {/* Liquid Glass Effect Layer */}
       <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-yellow-200/10 backdrop-blur-sm"></div>
 
@@ -107,15 +108,15 @@ export default function LearnPage() {
           <div className="bg-gradient-to-r from-white/10 via-white/5 to-white/10 backdrop-blur-xl border border-white/20 rounded-full px-10 py-5 shadow-[0_8px_32px_rgba(0,0,0,0.1),0_4px_16px_rgba(0,0,0,0.05),inset_0_2px_4px_rgba(255,255,255,0.1),inset_0_-2px_4px_rgba(0,0,0,0.05)]">
             <div className="flex items-center justify-center">
               <div className="flex items-center space-x-12">
-                <Link 
-                  href="/" 
+                <Link
+                  href="/"
                   className="text-white/80 hover:text-white transition-all duration-300 font-normal text-lg relative group"
                 >
                   Home
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-white/60 to-white/30 group-hover:w-full transition-all duration-300"></span>
                 </Link>
-                <Link 
-                  href="/learn" 
+                <Link
+                  href="/learn"
                   className="text-white hover:text-white/80 transition-all duration-300 font-normal text-lg relative group"
                 >
                   Learn
@@ -138,11 +139,12 @@ export default function LearnPage() {
         {/* Hero Section - ARISE Story */}
         <section className="pt-32 pb-16 px-8">
           <div className="max-w-6xl mx-auto text-center">
-            <div className="mb-8">
-              <img 
-                src="/ariselogo.png" 
-                alt="ARISE Logo" 
-                className="mx-auto h-20 w-auto object-contain mb-8 animate-float"
+            <div className="mb-8 relative w-full h-20">
+              <Image
+                src="/ariselogo.png"
+                alt="ARISE Logo"
+                fill
+                className="object-contain animate-float"
               />
             </div>
             <h1 className="text-5xl md:text-7xl font-light text-white mb-8 animate-fade-in-up">
@@ -150,20 +152,20 @@ export default function LearnPage() {
             </h1>
             <div className="max-w-4xl mx-auto space-y-6 text-lg text-white/80 leading-relaxed animate-fade-in-up animate-delay-200">
               <p>
-                ARISE started as a simple idea: <span className="text-white">make robotics education accessible to everyone</span>. 
-                In 2020, we started the Scarborough Stem Alliance (SSA) which was a non profit organization dedicated to creating opportunities for students and youth to get free hands on STEM education specifically with robotics. 
+                ARISE started as a simple idea: <span className="text-white">make robotics education accessible to everyone</span>.
+                In 2020, we started the Scarborough Stem Alliance (SSA) which was a non profit organization dedicated to creating opportunities for students and youth to get free hands on STEM education specifically with robotics.
               </p>
               <p>
                 After hosting over 100 workshops globally, impacting over 10,000 youth, and distributing robotics kits all around the world, we noticed something that our efforts didn&apos;t address. Robotics is an iterative process and you learn from doing and failing hundreds of times. More often than not, children typically won&apos;t grasp the content by attending one or two workshops. Physical robotics kits, especially ones we were conducting the workshops with: lego spike prime kits would cost anywhere between $500-1000 with expansion kits and other equipment. This was a huge barrier for many students and schools, especially in low income areas. So we created ARISE, the all in one robotics education platform.
               </p>
               <p>
-                Our founders, passionate about both education and technology, envisioned a platform where 
-                <span className="text-blue-400"> drag-and-drop simplicity meets professional-grade simulation</span>. 
-                From late-night coding sessions to partnerships with leading educational institutions, 
+                Our founders, passionate about both education and technology, envisioned a platform where
+                <span className="text-blue-400"> drag-and-drop simplicity meets professional-grade simulation</span>.
+                From late-night coding sessions to partnerships with leading educational institutions,
                 ARISE has grown into a comprehensive robotics learning ecosystem.
               </p>
               <p className="text-xl text-blue-300 font-normal">
-                Today, we&apos;re empowering thousands of students worldwide to build, program, and deploy robots 
+                Today, we&apos;re empowering thousands of students worldwide to build, program, and deploy robots
                 without the traditional barriers of entry.
               </p>
             </div>
@@ -178,16 +180,16 @@ export default function LearnPage() {
             </h2>
             {/* Timeline Header */}
             <div className="relative mb-16">
-              
+
               {/* Timeline Steps - Clean design with liquid glass beam */}
               <div className="flex justify-between items-center relative px-16">
                 {/* Liquid Glass Timeline Line - connects all numbers from 1 to 4 */}
-                <div className="absolute top-1/2 h-0.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full transform -translate-y-1/2 z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]" 
-                     style={{ left: '12.5%', right: '12.5%' }}></div>
-                
+                <div className="absolute top-1/2 h-0.5 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full transform -translate-y-1/2 z-0 shadow-[0_0_10px_rgba(255,255,255,0.1)]"
+                  style={{ left: '12.5%', right: '12.5%' }}></div>
+
                 {/* Animated Liquid Glass Beam - extends full line */}
                 <div className="absolute top-1/2 h-0.5 transform -translate-y-1/2 z-10 overflow-hidden"
-                     style={{ left: '12.5%', right: '12.5%' }}>
+                  style={{ left: '12.5%', right: '12.5%' }}>
                   <div className="h-full animate-beam-slide-full"></div>
                 </div>
 
@@ -273,16 +275,16 @@ export default function LearnPage() {
                 </div>
               ))}
             </div>          {/* Call to Action */}
-          <div className="mt-20 text-center">
-            <Button
-              onClick={() => window.open('https://iabai.itch.io/arise-sim', '_blank')}
-              className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-lg text-lg font-normal transition-all duration-300 hover:scale-105"
-            >
-              Join Our Journey
-            </Button>
+            <div className="mt-20 text-center">
+              <Button
+                onClick={() => window.open('https://iabai.itch.io/arise-sim', '_blank')}
+                className="bg-white text-black hover:bg-white/90 px-8 py-4 rounded-lg text-lg font-normal transition-all duration-300 hover:scale-105"
+              >
+                Join Our Journey
+              </Button>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
       </div>
     </main>
   )

@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useState } from "react"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 
 export default function NewsletterLandingPage() {
@@ -64,11 +65,13 @@ export default function NewsletterLandingPage() {
       {/* Content */}
       <div className="relative z-10 min-h-screen flex items-center justify-center px-4 shadow-none">
         <div className="w-full text-center">
-          <div className="opacity-0 animate-fade-in-up mb-12">
-            <img
+          <div className="opacity-0 animate-fade-in-up mb-12 relative w-full h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72">
+            <Image
               src="/ariselogo.png"
               alt="ARISE Logo"
-              className="mx-auto h-32 sm:h-40 md:h-48 lg:h-56 xl:h-64 2xl:h-72 w-auto object-contain"
+              fill
+              className="object-contain"
+              priority
             />
           </div>
 
