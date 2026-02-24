@@ -12,7 +12,7 @@ ARISE started with the **Scarborough STEM Alliance (SSA)**, a non-profit that ho
 
 **ARISE is the solution.** A platform where drag-and-drop simplicity meets professional-grade simulation, making robotics education accessible to everyone.
 
-## 🚀 Pages
+<!-- ## 🚀 Pages
 
 | Page | Route | Description |
 |------|-------|-------------|
@@ -31,14 +31,14 @@ ARISE started with the **Scarborough STEM Alliance (SSA)**, a non-profit that ho
 - **Auth:** [Supabase Auth](https://supabase.com/auth) (Google OAuth + email/password)
 - **Database:** [Supabase PostgreSQL](https://supabase.com) with Row Level Security
 - **Fonts:** Geist Sans, Geist Mono, Instrument Serif
-- **Animations:** Framer Motion + CSS animations
+- **Animations:** Framer Motion + CSS animations -->
 
-## 🔐 Authentication
+<!-- ## 🔐 Authentication
 
 - **Google OAuth** — Sign in with Google, configured via Supabase Auth Providers
 - **Email + Password** — Sign up and sign in with email (no email verification required)
 - **Profiles table** — Every authenticated user is automatically synced to a `profiles` table in the database with their name, email, avatar, and auth provider
-- **Middleware** — Session refresh on every request via `middleware.ts`
+- **Middleware** — Session refresh on every request via `middleware.ts` -->
 
 <!-- ## 📁 Project Structure
 
