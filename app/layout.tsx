@@ -35,7 +35,9 @@ html {
 }
         `}</style>
       </head>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable}`}>{children}</body>
+      <body className={`${GeistSans.variable} ${GeistMono.variable} ${instrumentSerif.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }
