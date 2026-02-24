@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { createClient } from "@/lib/supabase/client"
 import type { User } from "@supabase/supabase-js"
 
@@ -183,6 +184,10 @@ export default function AccountPage() {
                     <Image src="/accountbg.png" alt="Main Background" fill className="object-cover" priority />
                     <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
                 </div>
+                <Link href="/" className="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                    <span className="text-sm font-medium">Home</span>
+                </Link>
                 <div className="relative z-10 text-white text-xl font-medium animate-pulse">Loading...</div>
             </div>
         )
@@ -203,6 +208,10 @@ export default function AccountPage() {
                     <Image src="/accountbg.png" alt="Main Background" fill className="object-cover" priority />
                     <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
                 </div>
+                <Link href="/" className="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-200">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                    <span className="text-sm font-medium">Home</span>
+                </Link>
 
                 <div className="relative z-10 w-full max-w-md bg-white dark:bg-[#0a0a0a] rounded-3xl shadow-2xl overflow-hidden p-8 lg:p-12">
                     <div className="text-center">
@@ -263,6 +272,10 @@ export default function AccountPage() {
                 <Image src="/accountbg.png" alt="Main Background" fill className="object-cover" priority />
                 <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
             </div>
+            <Link href="/" className="absolute top-6 left-6 z-20 flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white hover:bg-white/20 transition-all duration-200">
+                <svg xmlns="http://www.w3.org/2000/svg" className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+                <span className="text-sm font-medium">Home</span>
+            </Link>
 
             <div className="relative z-10 w-full max-w-5xl bg-white dark:bg-[#0a0a0a] rounded-3xl shadow-2xl overflow-hidden flex flex-col lg:flex-row h-auto lg:min-h-[700px]">
 

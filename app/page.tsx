@@ -86,7 +86,7 @@ export default function NewsletterLandingPage() {
               {!isSubmitted ? (
                 <div className="max-w-sm mx-auto">
                   <Button
-                    onClick={() => window.open('https://www.arisesim.com/', '_blank')}
+                    onClick={() => window.open('https://arisewebgl.vercel.app/', '_blank')}
                     className="bg-gradient-to-br from-white/20 via-white/10 to-white/5 backdrop-blur-xl text-white border border-white/30 hover:border-white/50 rounded-full px-12 py-4 transition-all duration-500 font-medium text-lg shadow-[0_8px_32px_rgba(255,255,255,0.1),0_4px_16px_rgba(255,255,255,0.05),inset_0_2px_4px_rgba(255,255,255,0.2),inset_0_-2px_4px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(255,255,255,0.15),0_6px_20px_rgba(255,255,255,0.1),inset_0_2px_8px_rgba(255,255,255,0.3)] hover:bg-gradient-to-br hover:from-white/30 hover:via-white/15 hover:to-white/10 relative overflow-hidden before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:translate-x-[-200%] before:skew-x-12 before:transition-transform before:duration-700 hover:before:translate-x-[200%] hover:scale-105 cursor-pointer"
                   >
                     Launch Now
